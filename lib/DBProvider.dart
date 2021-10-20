@@ -18,9 +18,9 @@ class DBProvider {
 
   Future<Database> initializeDatabase() async {
     /// Get path to which you want to write the database
-    var dir = await getApplicationDocumentsDirectory();
-    var path = dir.path;
-    var databasePath = path + 'myDatabase.db';
+    var dir = await getDatabasesPath();
+    var path = dir;
+    var databasePath = join(path, 'myDatabase.db');
 
     if (await Directory(dirname(databasePath)).exists()) {
     } else {
@@ -48,7 +48,7 @@ class DBProvider {
   Future<List<Student>> getStudents() async {
     final db = await database;
     final res = await db?.query('students');
-    if (res!.isNotEmpty) {
+    if (res!.isEmpty) {
       return [];
     } else {
       return res.map((e) => Student.fromJson(e)).toList();
