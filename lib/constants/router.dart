@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/another_page.dart';
+import 'package:flutter_class/ui/another_page.dart';
 import 'package:flutter_class/main.dart';
 
-import 'animation.dart';
-import 'dtabase_test.dart';
+import '../ui/animation.dart';
+import '../ui/dtabase_test.dart';
 
 class MyRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {

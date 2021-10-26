@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/another_page.dart';
-import 'package:flutter_class/router.dart';
+import 'package:flutter_class/providers/pokemon_provider.dart';
+import 'package:flutter_class/ui/another_page.dart';
+import 'package:flutter_class/constants/router.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const FlutterClassApp());
@@ -12,14 +14,18 @@ class FlutterClassApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (_) => PokemonProvider(),
+      lazy: false,
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        // darkTheme: ,
+        initialRoute: '/',
+        onGenerateRoute: MyRouter.generateRoute,
       ),
-      // darkTheme: ,
-      initialRoute: '/',
-      onGenerateRoute: MyRouter.generateRoute,
     );
   }
 }

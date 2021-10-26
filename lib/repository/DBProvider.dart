@@ -1,5 +1,6 @@
 import 'dart:io';
-import 'package:flutter_class/student.dart';
+import 'package:flutter_class/repository/student.dart';
+import 'package:flutter_class/repository/student.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqlite_api.dart';
 import 'package:sqflite/sqflite.dart';

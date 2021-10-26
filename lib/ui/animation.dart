@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_class/pokemon_response.dart';
+import 'package:flutter_class/repository/pokemon_response.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:developer';
 

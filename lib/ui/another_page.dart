@@ -2,16 +2,16 @@ import 'dart:io';
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
-import 'main.dart';
+import '../main.dart';
 
-class AnotherPage extends StatefulWidget {
-  const AnotherPage({Key? key}) : super(key: key);
+class PokemonPage extends StatefulWidget {
+  const PokemonPage({Key? key}) : super(key: key);
 
   @override
-  _AnotherPageState createState() => _AnotherPageState();
+  _PokemonPageState createState() => _PokemonPageState();
 }
 
-class _AnotherPageState extends State<AnotherPage> {
+class _PokemonPageState extends State<PokemonPage> {
   final List<String> names = ['James', 'John'];
   final controller = ScrollController();
   final formKey = GlobalKey<FormState>();
